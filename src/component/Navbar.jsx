@@ -7,7 +7,7 @@ function Navbars() {
   return (
     <Navbar expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#" className="heading">
+        <Navbar.Brand href="/" className="heading">
           sk
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" className="text-white" />

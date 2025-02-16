@@ -36,7 +36,7 @@
 }
 
 .navbar-link.active {
-  color: #fff;
+  color: #3ccf91;
   border-bottom: 2px solid #fff;
 }
 .full-content {
@@ -204,7 +204,7 @@
   font-style: 16px !important;
 }
 .skill-icon:hover {
-transform: scale(1);
+  transform: scale(1);
   transform: rotate(15deg);
 }
 
