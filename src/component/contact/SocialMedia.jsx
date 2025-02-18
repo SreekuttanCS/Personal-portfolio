@@ -1,26 +1,33 @@
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import Media from "./Media";
 
 export const SocialMedia = () => {
   return (
     <div>
-      <div className="social-media d-flex align-items-center gap-2 py-3 ">
-        <FaInstagram />
-        <span>Instagram</span>
-      </div>
-      <div className="social-media d-flex align-items-center gap-2 py-3 ">
-        <SiGmail />
-        <span>Gmail </span>
-      </div>
-      <div className="social-media d-flex align-items-center gap-2 py-3 ">
-        <FaLinkedinIn />
-        <span>LinkedIn </span>
-      </div>
-      <div className="social-media d-flex align-items-center gap-2 py-3 ">
-        <FaGithub />
-        <span>Github </span>
-      </div>
+      <Media
+        icon={<FaLinkedinIn />}
+        title={"LinkedIn"}
+        href={"https://www.linkedin.com/in/sreekuttan7/"}
+      />
+      <Media
+        icon={<FaGithub />}
+        title={" GitHub"}
+        href={" https://github.com/SreekuttanCS"}
+      />
+      <Media
+        icon={<SiGmail />}
+        title={"Gmail"}
+        href={
+          "https://mail.google.com/mail/?view=cm&fs=1&to=sreekuttancs26@gmail.com"
+        }
+      />
+      <Media
+        icon={<FaInstagram />}
+        title={"Instagram"}
+        href={"https://www.instagram.com/_kxttan._"}
+      />
     </div>
   );
 };

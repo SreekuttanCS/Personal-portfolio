@@ -5,8 +5,8 @@ import About from "./component/About";
 import Project from "./component/Project";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import "./App.css";
+
 function App() {
   return (
     <Router>
