@@ -46,7 +46,6 @@
   justify-content: center;
 }
 
-
 .home {
   font-weight: 600;
   letter-spacing: 1px;
@@ -170,6 +169,25 @@
 .skill-icon:hover {
   transform: scale(1);
   transform: rotate(15deg);
+}
+.navbar-link,
+.nav-link {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.5rem !important;
+}
+
+.navbar-link:hover,
+.nav-link:hover {
+  color: #3ccf91;
+  text-decoration: underline;
+}
+
+.heading-navbar {
+  font-size: 2rem !important;
+  color: #3ccf91 !important;
 }
 
 @media screen and (max-width: 768px) {
