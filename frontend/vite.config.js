@@ -1,54 +1,48 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { visualizer } from 'rollup-plugin-visualizer'
-import viteCompression from 'vite-plugin-compression'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { visualizer } from "rollup-plugin-visualizer";
+import viteCompression from "vite-plugin-compression";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     visualizer({
-      filename: './dist/stats.html',
+      filename: "./dist/stats.html",
       open: false,
       gzipSize: true,
       brotliSize: true,
-      template: 'treemap'
+      template: "treemap",
     }),
     viteCompression({
-      algorithm: 'brotliCompress',
-      ext: '.br',
-      deleteOriginFile: false
+      algorithm: "brotliCompress",
+      ext: ".br",
+      deleteOriginFile: false,
     }),
     viteCompression({
-      algorithm: 'gzip',
-      ext: '.gz',
-      deleteOriginFile: false
-    })
+      algorithm: "gzip",
+      ext: ".gz",
+      deleteOriginFile: false,
+    }),
   ],
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          react: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          bootstrap: ['react-bootstrap'],
-          icons: ['react-icons'],
-          motion: ['framer-motion']
-        }
-      }
+          react: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          bootstrap: ["react-bootstrap"],
+          icons: ["react-icons"],
+          motion: ["framer-motion"],
+        },
+      },
     },
     chunkSizeWarningLimit: 1000,
-    minify: 'terser',
+    minify: "terser",
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
-      }
-    }
+        drop_debugger: true,
+      },
+    },
   },
-  server: ({ mode }) => ({
-    headers: mode === 'production' ? {
-      'Content-Encoding': 'gzip'
-    } : {}
-  })
-})
+});
