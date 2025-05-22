@@ -1,15 +1,40 @@
 import React from "react";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const FormContact = () => {
   return (
     <>
-      <input type="text" className="input-Contact my-3 " placeholder="Name" />
-      <input type="text" className="input-Contact my-3" placeholder="Email" />  
-      <textarea
-        className="textarea my-3 "
+      <motion.input
+        type="text"
+        className="input-Contact my-3"
+        placeholder="Name"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+      />
+      <motion.input
+        type="text"
+        className="input-Contact my-3"
+        placeholder="Email"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+      />
+      <motion.textarea
+        className="textarea my-3"
         placeholder="Type your message here."
-      ></textarea>
-      <button className="w-100 input-Contact contact-button">Send Message</button>
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
+      ></motion.textarea>
+      <motion.button
+        className="w-100 input-Contact contact-button"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }}
+      >
+        Send Message
+      </motion.button>
     </>
   );
 };

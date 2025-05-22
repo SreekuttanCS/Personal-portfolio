@@ -1,5 +1,5 @@
-import Backend from "./skill/Backend";
-import Frontend from "./skill/Frontend";
+import Backend from "../skill/Backend";
+import Frontend from "../skill/Frontend";
 
 const Skills = () => {
   return (
