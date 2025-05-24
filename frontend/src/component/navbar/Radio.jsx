@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
 
 const Radio = () => {
   return (
@@ -51,14 +51,19 @@ const Radio = () => {
 export default Radio;
 
 const StyledWrapper = styled.div`
-  padding: 15px 0;
+  padding: 15px 10px;
 `;
 
 const NavBar = styled.nav`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 15px;
+
+  @media (min-width: 768px) {
+    flex-direction: col;
+    gap: 30px;
+  }
 `;
 
 const NavItem = styled.div`

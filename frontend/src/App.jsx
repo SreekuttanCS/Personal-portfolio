@@ -14,14 +14,14 @@ function App() {
     <Router>
       <div className="full-content">
         <div className="container">
-          <Suspense fallback={<div>Loading Navbar...</div>}>
+          <Suspense fallback={<div></div>}>
             <Navbar />
           </Suspense>
           <Routes>
             <Route
               path="/"
               element={
-                <Suspense fallback={<div>Loading Home...</div>}>
+                <Suspense fallback={<div></div>}>
                   <Home />
                 </Suspense>
               }

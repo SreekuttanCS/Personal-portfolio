@@ -63,8 +63,8 @@ const StyledWrapper = styled.div`
   }
 
   .bars {
-    width: 100%;
-    height: 4px;
+    width: 80%;
+    height: 3px;
     background-color: rgb(253, 255, 243);
     border-radius: 5px;
     transition-duration: 0.3s;

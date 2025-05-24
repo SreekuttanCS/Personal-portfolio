@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://sreekuttan.vercel.app/sitemap.xml

@@ -9,23 +9,29 @@ const MenuBar = () => {
   return (
     <motion.div
       className="menu-container"
-      style={{ position: "relative" }}
+      style={{ position: "relative", zIndex: 999 }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <div style={{ position: "absolute", top: 0, left: 0 }}>
-        <Switch setIsMenu={setIsMenu} isMenu={isMenu} />
-        {isMenu && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <Radio />
-          </motion.div>
-        )}
-      </div>
+      <Switch setIsMenu={setIsMenu} isMenu={isMenu} />
+      {isMenu && (
+        <motion.div
+          style={{
+            position: "absolute",
+            top: "50px",
+            right: 0,
+
+            padding: "20px",
+            borderRadius: "8px",
+          }}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          <Radio />
+        </motion.div>
+      )}
     </motion.div>
   );
 };

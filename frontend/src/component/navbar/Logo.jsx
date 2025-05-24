@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <Link to="/">
+    <Link to="/" className="text-decoration-none">
       <LogoContainer>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -27,12 +27,17 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 5px 10px;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 const LogoText = styled.div`
   font-size: 36px;
   font-weight: 700;
   color: #3ccf91;
+  
 `;
