@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { Col, Row } from "react-bootstrap";
 
 const ProjectSection = () => {
+  const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
   return (
     <div className="projects">
-      {projects.map((item) => (
+      {sortedProjects.map((item) => (
         <motion.div
           key={item.id}
           initial={{ opacity: 0, y: 20 }}

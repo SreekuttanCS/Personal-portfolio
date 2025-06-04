@@ -4,7 +4,7 @@ This is my **personal portfolio website** built using **React**, designed to sho
 
 ## 🚀 Live Demo
 
-📁 [Source Code on GitHub](https://github.com/SreekuttanCS/Personal-portfolio/)
+[https://news-aggregator-eta-five.vercel.app/](https://news-aggregator-eta-five.vercel.app/)
 
 ---
 
@@ -43,5 +43,3 @@ Feel free to reach out or connect with me:
 - 🐙 GitHub: [SreekuttanCS](https://github.com/SreekuttanCS)
 
 ---
-
-> 🔧 This project is actively maintained. Suggestions and contributions are welcome!
